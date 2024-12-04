@@ -36,7 +36,7 @@ namespace ToDo.Application.Services
             return await _toDoRepository.GetIncomingToDos(startDate, endDate);
         }
 
-        public async Task<Domain.Entities.ToDo> GetToDoById(int id)
+        public async Task<Domain.Entities.ToDo?> GetToDoById(int id)
         {
             return await _toDoRepository.GetToDoById(id);
         }

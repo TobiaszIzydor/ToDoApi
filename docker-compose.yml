@@ -8,6 +8,8 @@ services:
     ports:
         - "5000:5000"
         - "5001:5001"
+    networks:
+      - todo
 
   todo.database:
     image: postgres:latest
@@ -20,4 +22,9 @@ services:
         - ./.containers/todo-db:/var/lib/postgresql/data
     ports:
         - 5432:5432
+    networks:
+      - todo
 
+networks:
+  todo:
+    driver: bridge

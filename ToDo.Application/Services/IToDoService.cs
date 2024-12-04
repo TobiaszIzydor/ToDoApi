@@ -10,7 +10,7 @@ namespace ToDo.Application.Services
     {
         Task<IEnumerable<ToDo.Domain.Entities.ToDo>> GetAllToDos();
         Task AddToDo(Domain.Entities.ToDo newToDo);
-        Task<Domain.Entities.ToDo> GetToDoById(int id);
+        Task<Domain.Entities.ToDo?> GetToDoById(int id);
         Task<IEnumerable<Domain.Entities.ToDo>> GetIncomingToDos(DateTime? startDate, DateTime? endDate);
         Task DeleteToDoById(int id);
         Task UpdateToDo(Domain.Entities.ToDo updatedToDo);
